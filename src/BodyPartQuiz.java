@@ -23,39 +23,73 @@ public class BodyPartQuiz {
 	String secondImage = "src/leonardo.jpeg";
 	String thirdImage = "src/morgan.jpeg";
 	String fourthImage = "src/jack.jpeg";
-	
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
-
-
 	private void startQuiz() {
-
 		// 1. Make an int variable to hold the score.
-int score = 0;
+		int score = 0;
 		// 2. Set the size of the window in the initializeGui() method below
-			
 		// 4. Ask the user who this person is and store their answer
 		String guess= JOptionPane.showInputDialog("who is this?");
-
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-if (guess=="arnold") {
-	System.out.println("Correct!");
-} else if (guess=="leonardo") {
-	System.out.println("");
-}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
+		if (guess=="arnold"){
+		System.out.println("Correct!");
+		}else {
+		System.out.println("YOU ARE WRONG! THE CORRECT ANSWER IS ARNOLD! YOU DOLT!");
+		}
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
 	    	// 8. Show them their current score
-
+		
+		// 4. Ask the user who this person is and store their answer
+		String cut = JOptionPane.showInputDialog("who is this?");
+		// 5. Check their answer. If they guessed correctly:
+		// -- Tell them they are right and increase the score by 1
+		// 6. Otherwise:
+		// -- Tell them they are wrong and who the person is
+		if (cut=="leonardo") {
+		System.out.println("Correct!");
+		} else{
+		System.out.println("WRONG YOU DOlT! THE CORRECT ANSWER IS LEONARDO!");
+		}
+		// 7. Use the showNextImage() method below to get the next image
+		showNextImage();
+		// 8. Show them their current score
+		
+		// 4. Ask the user who this person is and store their answer
+		String tut= JOptionPane.showInputDialog("who is this?");
+		// 5. Check their answer. If they guessed correctly:
+		// -- Tell them they are right and increase the score by 1
+		// 6. Otherwise:
+		// -- Tell them they are wrong and who the person is
+		if (tut=="morgan") {
+		System.out.println("Correct!");
+		} else{
+		System.out.println("THE ACTUAL ANSWER IS MORGAN! YOU DOLT!");
+		}
+		// 7. Use the showNextImage() method below to get the next image
+		showNextImage();
+	    	// 8. Show them their current score
+		
+		// 4. Ask the user who this person is and store their answer
+		String jut= JOptionPane.showInputDialog("who is this?");
+		// 5. Check their answer. If they guessed correctly:
+		// -- Tell them they are right and increase the score by 1
+		// 6. Otherwise:
+		// -- Tell them they are wrong and who the person is
+		if (jut=="jack") {
+		System.out.println("Correct!");
+		} else{
+		System.out.println("YOU ARE INDUBLITLY, HORREBLY, MONSTEROUSLY WRONG YOU DOLT! THE CORRECT ANSWER IS JACK!");
+		}
+		// 7. Use the showNextImage() method below to get the next image
+		showNextImage();
+		// 8. Show them their current score
 		// 9. .... repeat for all your images.....
-
-
 	}
-
 	public void showNextImage() {
 		panel.removeAll();
 		panel.add(getNextImage());		
@@ -89,7 +123,6 @@ if (guess=="arnold") {
 
 	ArrayList<JLabel> imageList = new ArrayList<JLabel>();
 	Iterator<JLabel> imageIterator;
-
 	private void initializeImageList() {
 		JLabel imageLabel = loadImage(firstImage);
 		imageList.add(imageLabel);
@@ -107,4 +140,4 @@ if (guess=="arnold") {
 		System.exit(0);
 		return new JLabel();
 	}
-}                                                                                                                                  
+}                                                                                                                                                                           
