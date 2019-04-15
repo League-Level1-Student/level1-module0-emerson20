@@ -37,6 +37,7 @@ public class BodyPartQuiz {
 		// -- Tell them they are wrong and who the person is
 		if (guess=="arnold"){
 		System.out.println("Correct!");
+		System.out.println(score++);
 		}else {
 		System.out.println("YOU ARE WRONG! THE CORRECT ANSWER IS ARNOLD! YOU DOLT!");
 		}
@@ -52,6 +53,7 @@ public class BodyPartQuiz {
 		// -- Tell them they are wrong and who the person is
 		if (cut=="leonardo") {
 		System.out.println("Correct!");
+		System.out.println(score++);
 		} else{
 		System.out.println("WRONG YOU DOlT! THE CORRECT ANSWER IS LEONARDO!");
 		}
@@ -67,6 +69,7 @@ public class BodyPartQuiz {
 		// -- Tell them they are wrong and who the person is
 		if (tut=="morgan") {
 		System.out.println("Correct!");
+		System.out.println(score++);
 		} else{
 		System.out.println("THE ACTUAL ANSWER IS MORGAN! YOU DOLT!");
 		}
@@ -82,6 +85,7 @@ public class BodyPartQuiz {
 		// -- Tell them they are wrong and who the person is
 		if (jut=="jack") {
 		System.out.println("Correct!");
+		System.out.println(score++);
 		} else{
 		System.out.println("YOU ARE INDUBLITLY, HORREBLY, MONSTEROUSLY WRONG YOU DOLT! THE CORRECT ANSWER IS JACK!");
 		}
