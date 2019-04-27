@@ -144,4 +144,4 @@ public class BodyPartQuiz {
 		System.exit(0);
 		return new JLabel();
 	}
-}                                                                                                                                                                           
+}                                                                                                                                              
