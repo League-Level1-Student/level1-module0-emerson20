@@ -10,12 +10,14 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.Callable;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class DrumKit implements MouseListener {
@@ -39,33 +41,34 @@ public class DrumKit implements MouseListener {
    	 // 5. Make a JPanel variable and initialize it using "new JPanel().
    	 JPanel cat = new JPanel();
    	 // 6. Add the panel to the frame. (The panel is invisible.)
-    
+    frame.add(cat);
    	 // 7. Download an image of a drum from the Internet. Drop it into your Eclipse project under "default package".
    	 // 8. Put the name of your image in a String variable.
-    
+    String dog = "Drum_Set.jpg";
    	 // 9. Edit the next line to use your String variable
-// drumLabelWithImage = createLabelImage(drumImageString);
-   	 
+     drumLabelWithImage = createLabelImage(dog);
    	 // 10. Add the image to the panel
-    
+    cat.add(drumLabelWithImage);
    	 // 11. Set the layout of the panel to "new GridLayout()"
-    
-      	 // 12. call the pack() method on the frame.  Run your program. Do you see your drum image?
-   	  
-   	 // 13. add this mouse listener to drumLabelWithImage
-    	
+    cat.setLayout(new GridLayout());
+     // 12. call the pack() method on the frame.  Run your program. Do you see your drum image?
+    frame.pack();
+    	// 13. add this mouse listener to drumLabelWithImage
+    	drumLabelWithImage.addMouseListener(this);
      	 // 18. Add more images to make a drumkit. Remember to add this mouse listener to each one.
 
     }
 
     public void mouseClicked(MouseEvent e) {
    	 // 14. Print "mouse clicked" to the console. Run your program and watch the console to see when this is printed.
-
+JOptionPane.showMessageDialog(null, "mouse clicked");
    	 JLabel drumClicked = (JLabel) e.getSource();  // This line gets the label that the mouse clicked on
    	 
    	 // 15. Download a drum sound and drop it into your "default package". You can find it on freesound.org. To download it, log in as leagueofamazing/code4life.
    	 // 16. If they clicked on the drumImage...
-
+if (drumClicked==drumLabelWithImage) {
+	playSound("drum.wav");
+}
    		 // 17. ...use the playSound method to play a drum sound. Test to see if it works
 
  
