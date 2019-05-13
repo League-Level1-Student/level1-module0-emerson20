@@ -11,7 +11,7 @@ public static void main(String[] args) {
 	cat.penDown();
 	cat.setSpeed(100);
 for (int i = 0; i < 5; i++) {
-	drawHouse();
+	drawHouse(100);
 	drawHome();
 }
 
@@ -21,13 +21,13 @@ for (int i = 0; i < 5; i++) {
 	
 
 }
-static void drawHouse(){
+static void drawHouse(int hieght){
 	cat.setPenColor(Color.black);
-	cat.move(100);
+	cat.move(hieght);
 	cat.turn(90);
 	cat.move(50);
 	cat.turn(90);
-	cat.move(100);
+	cat.move(hieght);
 	cat.turn(-90);
 	cat.setPenColor(Color.GREEN);
 	cat.move(20);
