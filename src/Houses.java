@@ -1,6 +1,7 @@
-package extra;
+
 
 import java.awt.Color;
+import java.util.Random;
 
 import org.jointheleague.graphical.robot.Robot;
 
@@ -11,6 +12,8 @@ public static void main(String[] args) {
 	cat.penDown();
 	cat.setSpeed(100);
 for (int i = 0; i < 5; i++) {
+	Random randy = new Random();
+	randy.nextInt();
 	drawHouse(100);
 	drawHome();
 }
