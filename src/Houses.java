@@ -3,6 +3,8 @@
 import java.awt.Color;
 import java.util.Random;
 
+import javax.xml.bind.ParseConversionEvent;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class Houses {
@@ -14,27 +16,39 @@ public static void main(String[] args) {
 for (int i = 0; i < 5; i++) {
 	Random randy = new Random();
 	randy.nextInt();
-	drawHouse(100);
+	drawHouse("large");
 	drawHome();
 }
 
-//.length
 	
 	
 	
 
 }
-static void drawHouse(int hieght){
+
+static void drawHouse(String size){
+		int height = 0;
+	if (size.equals("small")) {
+		height=60;
+	}
+	if (size.equals("medium")) {
+		height = 120;
+	}
+	if (size.equals("large")) {
+		height=250;
+	}
+	
 	cat.setPenColor(Color.black);
-	cat.move(hieght);
+	cat.move(height);
 	cat.turn(90);
 	cat.move(50);
 	cat.turn(90);
-	cat.move(hieght);
+	cat.move(height);
 	cat.turn(-90);
 	cat.setPenColor(Color.GREEN);
 	cat.move(20);
 	cat.turn(-90);
+
 }
 static void drawHome(){
 	cat.setPenColor(Color.black);
