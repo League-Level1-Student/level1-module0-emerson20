@@ -28,7 +28,7 @@ pig.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//5. Create and initialize an object of the JPanel class
 JPanel dog = new JPanel();
 		//6. Create and initialize an object of the JLabel class
-JLabel kat = new JLabel("Hello. How are you.");
+JLabel kat = new JLabel("Hello. How are you?");
 		//7. Set the text of the JLabel to a lovely greeting.
 
 		//8. Add the JPanel object to the JFrame
