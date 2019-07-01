@@ -1,5 +1,6 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -41,12 +42,12 @@ JFrame frame = new JFrame();
 
 		  //   d. Put a JOptionPane pop-up inside the actionPerformed() method that says "Woohoo".
 
-//call actionPerformed(ActionEvent e);
+
 
 	//	6. Generate a random number between 0 and 4:
 
 
-//		  int rand = new Random().nextInt(5);
+ 	 
 
 		//7. Depending on which random number, show one of the five fortunes.
 
@@ -59,11 +60,19 @@ JFrame frame = new JFrame();
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 					JOptionPane.showMessageDialog(null, "Woohoo!!!!!!!");
+					int randy = new Random().nextInt(5);
+					if (randy==0) {
+						JOptionPane.showMessageDialog(null, "you will live a good life");
+					}else if (randy==2) {
+						JOptionPane.showMessageDialog(null, "your wish will come true");
+					}else if (randy==4) {
+						JOptionPane.showMessageDialog(null, "someone in your family will die");
+					}else if (randy==1) {
+						JOptionPane.showMessageDialog(null, "you will expperience lose");
+					}else if (randy==3) {
+						JOptionPane.showMessageDialog(null, "you will get paid");
+					}
 				} 
 }
 
-class FortuneCookieRunner {
-    public static void main(String[] args) {
-        new FortuneCookie().showButton();
-  }
-}
+
