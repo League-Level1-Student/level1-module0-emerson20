@@ -9,10 +9,12 @@ import javax.swing.JPanel;
 
 public class SoundEffect implements ActionListener{
 	public static void main(String[] args) {
-	//call area();
-	
+	new SoundEffect().area(); 
+	new SoundEffect().actionPerformed(null);
+	new SoundEffect().playSound(null);
 	//1. Create a GUI for a sound effects machine that will play different sounds when the buttons are pressed.
     //If you need help, take a look at the instructions for the Fortune Cookie recipe.
+
 		//NOTE: because this GUI has more than one button, you must add a JPanel to your JFrame and put the buttons on the panel! 
 	
   
@@ -36,11 +38,11 @@ public void actionPerformed(ActionEvent e) {
 	
 }private void area(){
 	JFrame frame = new JFrame();
-	   frame.setVisible(true);                                                                                                                                                                            
+	   frame.setVisible(true);
 	   
 	   JPanel pat = new JPanel();
 	   pat.setVisible(true);
-	   
+
 	     frame.add(pat);
 	     
 	   JButton button = new JButton("water");
@@ -57,5 +59,4 @@ public void actionPerformed(ActionEvent e) {
 	    pat.add(bet);
 	    frame.pack();
 }
-
-} 
+}                                                                                                                                                                                                          
