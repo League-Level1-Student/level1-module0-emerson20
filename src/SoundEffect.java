@@ -8,6 +8,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class SoundEffect implements ActionListener{
+	JButton button = new JButton("water");
+	JButton boa = new JButton("bird");
+	JButton boat = new JButton("caaat");
+	JButton put = new JButton("dogs");
+	JButton bet = new JButton("pages");
+	
 	public static void main(String[] args) {
 	new SoundEffect().area(); 
 	new SoundEffect().actionPerformed(null);
@@ -35,6 +41,17 @@ private void playSound(String fileName) {
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
+	if (e.getSource() == boa) {
+		playSound("bird.wav");
+	}else if (e.getSource() == button) {
+		playSound("water.wav");
+	}else if (e.getSource() == boat) {
+		playSound("caat.wav");
+	}else if (e.getSource() == put) {
+		playSound("dogs.wav");
+	}else if (e.getSource() == bet) {
+	playSound("pages.wav");
+	}
 	
 }private void area(){
 	JFrame frame = new JFrame();
@@ -45,12 +62,16 @@ public void actionPerformed(ActionEvent e) {
 
 	     frame.add(pat);
 	     
-	   JButton button = new JButton("water");
+	   
 	   button.addActionListener(this);
-	   JButton boa = new JButton("bird");
-	   JButton boat = new JButton("caaat");
-	   JButton put = new JButton("dogs");
-	   JButton bet = new JButton("pages");
+	   
+	   boa.addActionListener(this);
+	   
+	   boat.addActionListener(this);
+	   
+	   put.addActionListener(this);
+	   
+	   bet.addActionListener(this);
 	   
 	    pat.add(button);
 	    pat.add(boa);
@@ -59,4 +80,4 @@ public void actionPerformed(ActionEvent e) {
 	    pat.add(bet);
 	    frame.pack();
 }
-}                                                                                                                                                                                                          
+}                                                                                                                                                                                                     
